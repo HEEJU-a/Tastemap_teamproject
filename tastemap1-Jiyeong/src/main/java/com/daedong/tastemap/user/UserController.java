@@ -5,6 +5,7 @@ import com.daedong.tastemap.board.model.BoardDomain;
 import com.daedong.tastemap.board.model.BoardEntity;
 import com.daedong.tastemap.board.model.RsvDTO;
 import com.daedong.tastemap.board.model.RsvEntity;
+import com.daedong.tastemap.security.IAuthenticationFacade;
 import com.daedong.tastemap.user.model.UserEntity;
 import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,9 @@ public class UserController {
 
     @Autowired
     private UserService service;
+
+    @Autowired
+    private IAuthenticationFacade auth;
 
     @GetMapping("/login")
     public void login(UserEntity userEntity){}
@@ -74,6 +78,8 @@ public class UserController {
 
     @PostMapping("/mypage")
     public String profile(MultipartFile img){
-        return "redirect:" + service.uploadProfile(img);
+        int iuser = auth.getLoginUserPk();
+        service.uploadProfile(img);
+        return "redirect:/user/mypage?iuser=" + iuser;
     }
 }
