@@ -1,0 +1,389 @@
+/*오늘뭐먹지 & 타이틀 이미지*/
+#title_back{
+    position: relative;
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 80vh;
+}
+
+#img {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://media.discordapp.net/attachments/863685703271448596/864744605307502602/Download_free_image_of_Assortment_of_tropical_citrus_fruits_background.jpg?width=1004&height=670);
+    background-size: cover;
+}
+
+.img_box{
+    background-size:cover;
+    background-position:100%;
+}
+/* */
+
+#today{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    top: 15%;
+    height: calc(100% - 70px);
+}
+
+#today > img {
+    display: block;
+    width: 80%;
+}
+
+/*룰렛*/
+.bg{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9998;
+}
+
+#rl {
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 25%;
+    width: 50%;
+    height: 90%;
+    padding-bottom: 100px;
+    border-radius: 5%;
+    background-color: rgb(238, 230, 211);
+    margin: 0 auto;
+    z-index: 9999;
+}
+
+#title{
+    margin-top:2%;
+    text-align:center; font-family: 'twaysky'; font-size: 50px;
+    color: rgb(255, 102, 0);
+    background: linear-gradient(to left, rgb(255, 94, 0), rgb(255, 204, 63));
+    color: transparent;
+    -webkit-background-clip: text;
+
+}
+
+.gradcircle {
+    width: 100px;
+    height: 100px;
+    border-radius: 5rem;
+    background: linear-gradient(to left, rgb(255, 94, 0), rgb(255, 204, 63));
+    -webkit-background-clip: text;
+}
+
+.box-roulette {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 1%;
+    left: 0.5%;
+}
+
+.roulette{
+    font-family: 'Jua', sans-serif;
+}
+
+#btn-start {
+    font-family: 'Pattaya', sans-serif;
+    font-size: 20px;
+    color: tomato;
+}
+
+#btn-start span {
+    display: inline-block;
+    margin: 0 -.075em;
+    animation: loading .7s infinite alternate;
+}
+#btn-startspan:nth-child(2) {
+    animation-delay: .1s;
+}
+#btn-start span:nth-child(3) {
+    animation-delay: .2s;
+}
+#btn-start span:nth-child(4) {
+    animation-delay: .3s;
+}
+#btn-start span:nth-child(5) {
+    animation-delay: .4s;
+}
+#btn-start span:nth-child(6) {
+    animation-delay: .5s;
+}
+#btn-start span:nth-child(7) {
+    animation-delay: .6s;
+}
+@keyframes loading {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+button{border:0;margin:0;padding:0;}
+
+.box-roulette{position:relative;margin:50px auto;width:500px;height:500px;border:10px; box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.4), -3px -3px 5px rgba(0, 0, 0, 0.1); border-radius:50%;background:#ccc;overflow:hidden;}
+.box-roulette .markers{position:absolute;left:50%;top:0;margin-left:-25px;width:0;height:0;border:25px solid #fff;border-left-color:transparent;border-right-color:transparent;border-bottom-color:transparent;z-index:9999;}
+.box-roulette .roulette{position:relative;width:100%;height:100%;overflow:hidden;}
+.box-roulette .item{position:absolute;top:0;width:0;height:0;border:0 solid transparent;transform-origin:0 100%;}
+.box-roulette .label{position:absolute;left:70px;top:-20px;;color:white;white-space:nowrap;transform-origin:0 0;}
+.box-roulette .label .text{display:inline-block;font-size:25px;line-height:1;vertical-align:middle;}
+
+#btn-start{position:absolute;left:50%;top:50%;margin:-50px 0 0 -50px;width:100px;height:100px;background:#fff;border-radius:50px;z-index:9999;cursor:pointer;}
+
+.close_btn{
+    cursor: pointer;
+    position: absolute;
+    background-color: rgb(238, 230, 211);
+    top: 25px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+}
+.close_btn .fa-times {
+    color:tomato;
+}
+
+@media screen and (max-width: 1150px) {
+    #rl {
+        width: 567px;
+        height: 570px;
+        left: calc(50vw - 283px);
+    }
+}
+
+/* 검색지도 */
+
+.map_wrap, .map_wrap * {margin:0;padding:0;font-family:'twayair';font-size:1rem;}
+.map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
+.map_wrap {position:relative;width:100%;height:500px;}
+#menu_wrap {position:absolute;top:0;left:0;bottom:0;width:250px;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.7);z-index: 1;font-size:12px;border-radius: 10px;}
+.bg_white {background:rgb(238, 230, 211);}
+#menu_wrap hr {display: block; height: 1px;border: 0; border-top: 2px solid #5F5F5F;margin:3px 0;}
+#menu_wrap .option{text-align: center;}
+#menu_wrap .option p {margin:10px 0;}
+#menu_wrap .option button {margin-left:5px;}
+#placesList li {list-style: none;}
+#placesList .item {position:relative;border-bottom:1px solid #888;overflow: hidden;cursor: pointer;min-height: 65px;}
+#placesList .item span {display: block;margin-top:4px;}
+#placesList .item h5, #placesList .item .info {text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+#placesList .item .info{padding:10px 0 10px 55px;}
+#placesList .info .gray {color:#8a8a8a;}
+#placesList .info .jibun {padding-left:26px;background:url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png) no-repeat;}
+#placesList .info .tel {color:#009900;}
+#placesList .item .markerbg {float:left;position:absolute;width:36px; height:37px;margin:10px 0 0 10px;background:url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png) no-repeat;}
+#placesList .item .marker_1 {background-position: 0 -10px;}
+#placesList .item .marker_2 {background-position: 0 -56px;}
+#placesList .item .marker_3 {background-position: 0 -102px}
+#placesList .item .marker_4 {background-position: 0 -148px;}
+#placesList .item .marker_5 {background-position: 0 -194px;}
+#placesList .item .marker_6 {background-position: 0 -240px;}
+#placesList .item .marker_7 {background-position: 0 -286px;}
+#placesList .item .marker_8 {background-position: 0 -332px;}
+#placesList .item .marker_9 {background-position: 0 -378px;}
+#placesList .item .marker_10 {background-position: 0 -423px;}
+#placesList .item .marker_11 {background-position: 0 -470px;}
+#placesList .item .marker_12 {background-position: 0 -516px;}
+#placesList .item .marker_13 {background-position: 0 -562px;}
+#placesList .item .marker_14 {background-position: 0 -608px;}
+#placesList .item .marker_15 {background-position: 0 -654px;}
+#pagination {margin:10px auto;text-align: center;}
+#pagination a {display:inline-block;margin-right:10px;}
+#pagination .on {font-weight: bold; cursor: default;color:#777;}
+
+#fadeToggleBtn {
+    box-shadow:inset 0px 1px 0px 0px #f9eca0;
+    background:linear-gradient(to bottom, #FFDB5C 5%, #F9A603 100%);
+    background-color:#F9ba3e;
+    border-radius:6px;
+    /* box-shadow: inset 5em 1em #F8A055; */
+    display:inline-block;
+    cursor:pointer;
+    color: #426e86;
+    font-family:'twayair';
+    font-size:2rem;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ded17c;
+    display: block;
+    margin: auto;
+}
+#fadeToggleBtn:hover {
+    background:linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
+    background-color:#f2ab1e;
+}
+#fadeToggleBtn:active {
+    position:relative;
+    top:1px;
+}
+
+.search{
+    padding-top: 2%;
+    position: relative;
+    width: 100%;
+    height: 10%;
+}
+.search #keyword{
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    border-radius: 0.5rem;
+    width: 95%;
+    height: 52%;
+    justify-content: center;
+    align-items: center;
+}
+.search .map_btn{
+    position: absolute;
+    border-radius: 0.5rem;
+    width: 25%;
+    height: 43%;
+    top: 45%;
+    right: 3%;
+    background-color: #F2c057;
+    border: 1px solid #F2c057;
+}
+
+/*칸칸이*/
+#grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    height: 700px;
+}
+section{margin: 40px; height: auto;}
+
+#grid>div{
+    box-shadow: 5px 5px 10px rgb(111, 111, 111);
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    border-radius: 2%;
+    text-align: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/*#grid > div > img{*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*}*/
+
+#grid .box > a{
+    width: 100%;
+    height: 100%;
+    font-family: 'twaysky';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(231, 172, 61);
+    text-shadow: 5px 5px 10px rgb(111, 111, 111);
+}
+
+#grid .box> a:hover{
+    background-color: rgba( 255, 255, 255, 0.5 );
+}
+
+.box:first-child { background-image: url("https://img.hankyung.com/photo/202010/01.24004143.1.jpg"); background-size: cover; }
+.box:nth-child(2) { background-image: url("https://storage1.ilyo.co.kr/contents/article/images/2015/0105/1420458276656118.jpg"); background-size: cover; }
+.box:nth-child(3) { background-image: url("https://www.kyongbuk.co.kr/news/photo/202004/2037628_450570_5706.jpg"); background-size: cover; }
+.box:nth-child(4) { background-image: url("https://cdn.dtnews24.com/news/photo/201711/123673_439790.jpg"); background-size: cover; }
+.box:nth-child(5) { background-image: url("https://i0.wp.com/blog.allstay.com/wp-content/uploads/2019/06/photo01-1.jpg?w=760&ssl=1"); background-size: cover; }
+.box:nth-child(6) { background-image: url("https://www.newgbnews.com/news/photo/202103/227389_34647_1314.jpg"); background-size: cover; }
+.box:nth-child(7) { background-image: url("http://ojsfile.ohmynews.com/STD_IMG_FILE/2017/0226/IE002116276_STD.jpg"); background-size: cover; }
+.box:last-child { background-image: url("http://www.daeguview.com/DATA/photo/thumb_b_20190909051030.jpg"); background-size: cover; }
+
+
+/*슬라이드*/
+.swiper-container {
+    height:40vh;
+    border-radius:7px;
+    padding-top: 40px;
+}
+.swiper-wrapper{
+    height:100%;
+}
+.swiper-slide > a {
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height: 100%;
+    font-family: 'twaysky';
+    font-size: 3rem;
+    color: tomato;
+    text-shadow: 5px 5px 10px rgb(111, 111, 111);
+}
+
+.swiper-slide > a:hover{
+    background-color: rgba( 255, 255, 255, 0.5 );
+}
+
+.swiper-slide:first-child{background-image: url("https://newsimg.hankookilbo.com/cms/articlerelease/2020/07/13/0fcdbd8b-13aa-4436-8804-8f911090eb24.jpg"); background-size: cover;}
+.swiper-slide:nth-child(2){background-image: url("https://www.dolomiticlass.it/storage/property/services/513/conversions/Piatto_gourmet_My_Arbor_Hotel_Bressanone_01-desktop.jpg"); background-size: cover;}
+.swiper-slide:nth-child(3){background-image: url("https://rachelgouk.com/wp-content/uploads/2019/07/sushi-naoki-japanese-restaurant-shanghai.jpg"); background-size: cover;}
+.swiper-slide:nth-child(4){background-image: url("https://koreajoongangdaily.joins.com/jmnet/koreajoongangdaily/_data/photo/2019/03/31184114.jpg"); background-size: cover;}
+.swiper-slide:nth-child(5){background-image: url("https://i2.wp.com/en.blog.kkday.com/wp-content/uploads/batch_Vietnam_pho_AShutterstock_650070463.jpg?w=900&ssl=1"); background-size: cover;}
+.swiper-slide:last-child{background-image: url("https://livingnomads.com/wp-content/uploads/2018/08/03/Street-Food-Stall-in-seoul.jpg"); background-size: cover;}
+
+.swiper-slide img {
+    box-shadow:0 0 5px #555;
+    max-width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*footer*/
+footer{
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+#btm{
+    position: relative;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+#btm > div {
+    float:left;
+}
+#btm > div > div {
+    display: inline-block;
+}
+#btm > div > div::after{
+    content:"|";
+    float: right;
+    color: black;
+}
+#btm > div > div:first-child::after{
+    content: "";
+}
+#btm > div > div:last-child::after{
+    content: "";
+}
+
+#btm p{
+    flex-direction: column;
+}

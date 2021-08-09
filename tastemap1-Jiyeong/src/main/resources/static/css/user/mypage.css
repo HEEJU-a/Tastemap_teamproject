@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@font-face {/*티웨이하늘-제목*/
+    font-family: 'twaysky';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {/*티웨이항공-내용*/
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*#flexContainer {*/
+/*    padding-top: 100px;*/
+/*    display: grid;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    margin-bottom: 15px;*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    grid-template-columns: repeat(2, 0.5fr);*/
+/*    grid-template-rows: repeat(2, 1fr);*/
+/*}*/
+
+/*img {*/
+/*    border-radius: 50%;*/
+/*    width: 300px;*/
+/*    height: 300px;*/
+/*    object-fit: cover;*/
+/*}*/
+
+section{
+    overflow: hidden;
+    padding-top: 100px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /*margin: 20px auto 0 auto;*/
+}
+
+#wrap{
+    height: 80vh;
+    width: 40vw;
+    border: 1px solid lightgray;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4), -3px -3px 5px rgba(0, 0, 0, 0.1);
+}
+
+#up{
+    padding: 40px;
+    position: relative;
+    width: 100%;
+    height: 50%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+#upForm{
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    width: 30%;
+    height: 30%;
+    margin: 0 auto;
+}
+img{
+    border-radius: 50%;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.upload{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#table{
+    background-color: #fffbce;;
+    width: 65%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+th{
+    color: #ff9856;
+    border-right: 1px solid #f5f2ed;
+}
+td{
+    padding-left: 5px;
+    font-weight: lighter;
+    color: #643520;
+}
+#btm{
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 50%;
+}
+#favWrap{
+    border: 1px solid #f5f2ed;
+    font-family: 'twayair';
+    width: 55%;
+    height: 70%;
+    -ms-overflow-style: none;
+    margin-left: 140px;
+}
+#favWrap::-webkit-scrollbar{ display:none;}
+.favItem{
+    text-align: center;
+    width: 100%;
+}
+.favItem > div {
+    height: 20px;
+}
+.rsnm{
+    color: #643520;
+    border-collapse: separate;
+    border-spacing: 1px;
+    background-color: #fffcf4;
+    border: 1px solid #f5f2ed;
+}
+
+#rsvWrap {
+    border: 1px solid #f5f2ed;
+    font-family: 'twayair';
+    width: 55%;
+    height:70%;
+    -ms-overflow-style: none;
+}
+#rsvWrap::-webkit-scrollbar{ display:none; }
+
+#rsvTable{
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: center;
+}
+.rsvTh{
+    color: #ff9856;
+    width: 30%;
+    background-color: #fffbce;
+    font-weight: bold;
+    vertical-align: top;
+    text-align: center;
+}
+.rsvTd{
+    vertical-align: top;
+    border: 1px solid #f5f2ed;
+    background-color: #fffcf4;
+    color: #643520;
+}
+
+.rsvItem {
+    text-align: center;
+    width: 100%;
+}
+.rsvItem > div {
+    height: 20px;
+    background-color: antiquewhite;
+}
+h3{
+    color: #ff9856;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #fffbce;
+}
