@@ -7,10 +7,14 @@
 
 <th:block layout:fragment="css">
   <link rel="stylesheet" th:href="@{/css/user/mypage.css}">
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css' rel='stylesheet' />
 </th:block>
 
 <th:block layout:fragment="js">
   <script defer th:src="@{/js/user/mypage.js}"></script>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/locales-all.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js'></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </th:block>
 
 <th:block layout:fragment="content" th:with="profile=${#authentication.getPrincipal().getUser()}">
@@ -83,6 +87,12 @@
     </div>
   </div>
   </div>
+
+    <!-- calendar 태그 -->
+    <div id="calendar-container">
+      <div id="calendar"></div>
+    </div>
+
   </section>
 </th:block>
 </html>
