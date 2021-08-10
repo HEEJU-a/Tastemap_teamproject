@@ -19,11 +19,28 @@
     <select id="selBoardRsad" resultType="BoardDomain">
         <include refid="list"/>
         WHERE A.rsad LIKE CONCAT('대구광역시 ', #{rsad}, '%')
+        <if test="recordCnt > 0">
+            LIMIT #{startIdx}, #{recordCnt}
+        </if>
     </select>
 
     <select id="selBoardRsc" resultType="BoardDomain">
         <include refid="list"/>
         and A.rsc = #{rsc}
+        <if test="recordCnt > 0">
+            LIMIT #{startIdx}, #{recordCnt}
+        </if>
+    </select>
+
+    <select id="selMaxPageVal" resultType="_int">
+        SELECT ceil(COUNT(*)/#{recordCnt})
+        FROM t_matzip
+        <if test=" rsad != null and rsad != '' ">
+            WHERE rsad LIKE CONCAT('대구광역시 ', #{rsad}, '%')
+        </if>
+        <if test=" rsc != null and rsc != '' ">
+            WHERE rsc = #{rsc}
+        </if>
     </select>
 
     <!-- ////////////// DETAIL ///////////////-->

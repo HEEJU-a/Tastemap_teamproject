@@ -26,4 +26,6 @@ public interface BoardMapper {
     int delFav(FavEntity param);
     int getFav(FavEntity param);
 
+    int selMaxPageVal(BoardDomain param);
+
 }

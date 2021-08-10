@@ -20,11 +20,13 @@ public class BoardController {
     @Autowired private BoardService service;
 
     @GetMapping("/list")
-    public String list(@RequestParam(value="rs") String rs, @AuthenticationPrincipal CustomUserPrincipal userDetail, Model model) {
+    public String list(@RequestParam(value="rs") String rs, @AuthenticationPrincipal CustomUserPrincipal userDetail, Model model, String page) {
 
         BoardDomain param = new BoardDomain();
         param.setIuser(userDetail.getUser().getIuser());
-
+        if(page != null) {
+            param.setPage(Integer.parseInt(page));
+        }
         List<BoardDomain> list = null;
         System.out.println("rs : " + rs);
 
@@ -60,8 +62,11 @@ public class BoardController {
         }
         // System.out.println("list : " + list.toString());
         // System.out.println("list[0] : " + list.get(0));
+        System.out.println(list);
         model.addAttribute("list", list);
-
+        int maxPageVal = service.selMaxPageVal(param);
+        System.out.println("페이지"+ maxPageVal);
+        model.addAttribute("maxPageVal", maxPageVal);
         return "board/list";
     }
 

@@ -12,4 +12,7 @@ public class BoardDomain extends BoardEntity{
     private int iuser;
     private int favCnt;
     private int isFav;
+    private int startIdx;
+    private int recordCnt = 10;
+    private int page = 1;
 }

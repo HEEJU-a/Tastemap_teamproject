@@ -136,3 +136,14 @@ section{
 .favIcon:hover{
     color: tomato;
 }
+/*페이징*/
+.paging{
+    display: flex;
+    justify-content: center;
+    letter-spacing: 30px;
+}
+.selected{
+    font-weight : bold;
+    color: #e74c3c;
+}
+
