@@ -23,10 +23,15 @@ public class BoardController {
     public String list(@RequestParam(value="rs") String rs, @AuthenticationPrincipal CustomUserPrincipal userDetail, Model model, String page) {
 
         BoardDomain param = new BoardDomain();
-        param.setIuser(userDetail.getUser().getIuser());
+
+        if(userDetail != null){
+            param.setIuser(userDetail.getUser().getIuser());
+        }
+
         if(page != null) {
             param.setPage(Integer.parseInt(page));
         }
+
         List<BoardDomain> list = null;
         System.out.println("rs : " + rs);
 

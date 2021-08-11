@@ -105,7 +105,9 @@ public class UserService{
         return "/user/mypage";
     }
 
-    public List<RsvDTO> selRsvList(UserEntity param){return mapper.selRsvList(param);}
+    public List<RsvDTO> selRsvList(UserEntity param){
+        System.out.println("확인:"+mapper.selRsvList(param));
+        return mapper.selRsvList(param);}
     public List<BoardDomain> selFavList(UserEntity param){return mapper.selFavList(param);}
 }
 

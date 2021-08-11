@@ -68,18 +68,18 @@
     <div id="rsvWrap" style="overflow-y: scroll;">
       <div class="rsvItem"><h3>내가 예약한 식당</h3>
         <span th:each="item : ${rsvDTO}">
-           <table id="rsvTable">
+           <table class="rsvTable">
             <tr>
               <th class="rsvTh">날짜</th>
-              <td class="rsvTd" th:text="${item.dt}"></td>
+              <td class="rsvDt" th:text="${item.dt}"></td>
             </tr>
             <tr>
               <th class="rsvTh">인원</th>
-              <td class="rsvTd" th:text="${item.memberct}"></td>
+              <td class="rsvCt" th:text="${item.memberct}"></td>
             </tr>
             <tr>
               <th class="rsvTh">식당</th>
-              <td class="rsvTd" th:text="${item.rsnm}"></td>
+              <td class="rsvNm" th:text="${item.rsnm}"></td>
             </tr>
            </table>
         </span>
@@ -90,9 +90,8 @@
 
     <!-- calendar 태그 -->
     <div id="calendar-container">
-      <div id="calendar"></div>
+      <div id="calendar" ></div>
     </div>
-
   </section>
 </th:block>
 </html>

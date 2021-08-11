@@ -43,7 +43,6 @@ section{
     padding-top: 20px;
     width: 100%;
     height: 100%;
-
 }
 #calendar .fc button{
     background-color: #f9eca0;
@@ -108,16 +107,15 @@ td{
     color: #643520;
 }
 #btm{
-    padding-top: 50px;
+    padding-top: 80px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     width: 100%;
     height: 50%;
 }
 #favWrap{
     border: 1px solid #f5f2ed;
     font-family: 'twayair';
-    width: 55%;
+    width: 54%;
     height: 70%;
     -ms-overflow-style: none;
     margin-left: 140px;
@@ -141,13 +139,13 @@ td{
 #rsvWrap {
     border: 1px solid #f5f2ed;
     font-family: 'twayair';
-    width: 55%;
-    height:70%;
+    width: 0;
+    height:0;
     -ms-overflow-style: none;
 }
 #rsvWrap::-webkit-scrollbar{ display:none; }
 
-#rsvTable{
+.rsvTable{
     border-collapse: separate;
     border-spacing: 1px;
     text-align: center;
