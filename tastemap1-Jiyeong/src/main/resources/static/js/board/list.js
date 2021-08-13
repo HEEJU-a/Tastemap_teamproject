@@ -15,7 +15,7 @@ function event1(iboard, index) {
     }
 }
 
-            function insFavAjax(iboard1, index) {
+        function insFavAjax(iboard1, index) {
         const param = {iboard: iboard1};
         console.log(param);
         const init = {
@@ -34,9 +34,9 @@ function event1(iboard, index) {
                 console.log("ins:" + myJson);
                 if (myJson === 1) {
                     toggleFav(1, index);
-                } else {
-                    alert('실패');
-                }
+                 } //else {
+                //     alert('실패');
+                // }
             })
     }
 
@@ -73,19 +73,15 @@ function event1(iboard, index) {
     function toggleFav(toggle, index) {
         console.log(favIconElem[index]);
         console.log(toggle);
-        const elem = favIconElem[index]
+        const elem = favIconElem[index];
         switch (toggle) {
             case 0: //좋아요 X
-                // elem.classList.remove('fas');
-                // elem.classList.add('far');
-                elem.addClass('far');
-                elem.removeClass('fas');
+                elem.classList.remove('fas');
+                elem.classList.add('far');
                 break;
             case 1: //좋아요 O
-                // elem.classList.remove('far');
-                // elem.classList.add('fas');
-                elem.addClass('fas');
-                elem.removeClass('far');
+                elem.classList.remove('far');
+                elem.classList.add('fas');
                 break;
         }
     }

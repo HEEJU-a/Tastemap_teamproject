@@ -4,7 +4,7 @@
 
 <mapper namespace="com.daedong.tastemap.board.BoardMapper">
     <sql id="list">
-        SELECT A.rsnm, A.iboard, A.rsad, IFNULL(D.iuser,0) AS isFav
+        SELECT A.rsnm, A.iboard, A.rsad, A.rsc, IFNULL(D.iuser,0) AS isFav
         FROM t_matzip A
         LEFT JOIN (
             SELECT B.iuser, B.iboard
@@ -26,7 +26,7 @@
 
     <select id="selBoardRsc" resultType="BoardDomain">
         <include refid="list"/>
-        and A.rsc = #{rsc}
+        WHERE A.rsc LIKE CONCAT('%', #{rsc}, '%')
         <if test="recordCnt > 0">
             LIMIT #{startIdx}, #{recordCnt}
         </if>

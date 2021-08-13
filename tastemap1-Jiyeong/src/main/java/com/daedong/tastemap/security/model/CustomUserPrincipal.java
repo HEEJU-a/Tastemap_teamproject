@@ -11,7 +11,6 @@ import java.util.Map;
 
 public class CustomUserPrincipal implements UserDetails, OAuth2User {
 
-
     @Getter
     private UserEntity user;
     private Map<String, Object> attributes;
@@ -37,7 +36,6 @@ public class CustomUserPrincipal implements UserDetails, OAuth2User {
 
     @Override
     public String getUsername() {
-
         return user.getEmail();
     }
 

@@ -145,5 +145,7 @@ section{
 .selected{
     font-weight : bold;
     color: #e74c3c;
+    gap: 10px;
 }
+
 

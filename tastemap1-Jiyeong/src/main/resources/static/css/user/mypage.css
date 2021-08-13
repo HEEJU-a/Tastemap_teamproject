@@ -137,8 +137,6 @@ td{
 }
 
 #rsvWrap {
-    border: 1px solid #f5f2ed;
-    font-family: 'twayair';
     width: 0;
     height:0;
     -ms-overflow-style: none;
@@ -179,4 +177,7 @@ h3{
     position: sticky;
     top: 0;
     background-color: #fffbce;
+}
+
+.fc-event-title:hover {
 }

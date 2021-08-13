@@ -15,14 +15,20 @@ public class BoardService {
     private IAuthenticationFacade auth;
 
     public List<BoardDomain> selBoardRsad(BoardDomain param) {
-        param.setIuser(auth.getLoginUserPk());
+        if(auth.getLoginUser() != null) {
+            param.setIuser(auth.getLoginUserPk());
+        }
+
         int startIdx = (param.getPage() - 1) * param.getRecordCnt();
         param.setStartIdx(startIdx);
         return mapper.selBoardRsad(param);
     }
 
     public List<BoardDomain> selBoardRsc(BoardDomain param) {
-        param.setIuser(auth.getLoginUserPk());
+        if(auth.getLoginUser() != null) {
+            param.setIuser(auth.getLoginUserPk());
+        }
+
         int startIdx = (param.getPage() - 1) * param.getRecordCnt();
         param.setStartIdx(startIdx);
         return mapper.selBoardRsc(param);

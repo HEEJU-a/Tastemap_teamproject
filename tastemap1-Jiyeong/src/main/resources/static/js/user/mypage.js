@@ -37,7 +37,8 @@ function apiInfo() {
 
         for (var i=0; i<rsvTable.length; i++) {
             var obj = {
-                title: rsvTable[i].querySelector('.rsvNm').innerText,
+                title: ((rsvTable[i].querySelector('.rsvNm').innerText)
+                    + '(' + (rsvTable[i].querySelector('.rsvCt').innerText)) + ')',
                 start: rsvTable[i].querySelector('.rsvDt').innerText,
                 allDay: true
             }
