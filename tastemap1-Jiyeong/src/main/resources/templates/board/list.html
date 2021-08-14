@@ -71,16 +71,18 @@
                 </div>
             </div>
 
-            <div class="paging">
-                <th:block th:each="page: ${#numbers.sequence(1, maxPageVal)}">
-                    <th:block th:if="${(param.page == null && page == 1 )|| #strings.equals(#strings.toString(page), param.page)}">
-                        <span class="selected" th:text="${page}"></span>
-                    </th:block>
-                    <th:block th:unless="${(param.page == null && page == 1 )|| #strings.equals(#strings.toString(page), param.page)}">
-                        <span><a th:href="@{/board/list(rs=${param.rs},page=${page},recordCnt=${param.recordCnt == null ? 10 : param.recordCnt})}" th:text="${page}"></a></span>
-                        <!--                        <span><a th:href="list?page="+${page}&recordCnt=${page.recordCnt == null ? 10 : page.recordCnt}">${page}</a></span>-->
-                    </th:block>
-                </th:block>
-            </div>
         </section>
+
+        <div class="paging">
+            <th:block th:each="page: ${#numbers.sequence(1, maxPageVal)}">
+                <th:block th:if="${(param.page == null && page == 1 )|| #strings.equals(#strings.toString(page), param.page)}">
+                    <span class="selected" th:text="${page}"></span>
+                </th:block>
+                <th:block th:unless="${(param.page == null && page == 1 )|| #strings.equals(#strings.toString(page), param.page)}">
+                    <span><a th:href="@{/board/list(rs=${param.rs},page=${page},recordCnt=${param.recordCnt == null ? 10 : param.recordCnt})}" th:text="${page}"></a></span>
+                    <!--                        <span><a th:href="list?page="+${page}&recordCnt=${page.recordCnt == null ? 10 : page.recordCnt}">${page}</a></span>-->
+                </th:block>
+            </th:block>
+        </div>
+
     </th:block>

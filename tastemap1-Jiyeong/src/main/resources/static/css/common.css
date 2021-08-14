@@ -203,7 +203,6 @@ li {
 }
 
 #login {
-    font-family: 'twayair';
     display: none;
     position: fixed;
     top: 10%;
@@ -215,18 +214,23 @@ li {
     background-color: rgb(238, 230, 211);
     margin: 0 auto;
     z-index: 9999;
+    padding: 10px;
 }
 
-.login_form{
+/*.login_form{
     display: grid;
+    position: relative;
     justify-content: center;
     align-items: center;
     padding: 10px;
     width: 450px;
-}
+}*/
 
 h1{
     display: block;
+    position: relative;
+    justify-content: center;
+    align-items: center;
     font-size: 2em;
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
@@ -238,8 +242,12 @@ h1{
 
 
 .login_sns {
+    position: relative;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     display: flex;
+    width: 100%;
 }
 
 .login_sns li {
@@ -252,8 +260,8 @@ h1{
     display: grid;
     width: 100%;
     height: 90%;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     padding: 10px;
     border-radius: 50%;
     background: white;
@@ -262,38 +270,53 @@ h1{
 }
 
 .login_id {
+    position: relative;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
     width: 100%;
+    padding-left: 15%;
 }
 
 .login_id input {
-    width: 100%;
+    width: 80%;
     height: 50px;
     border-radius: 30px;
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 0px 20px;
     border: 1px solid lightgray;
     outline: none;
+    font-size: 1rem;
 }
 
 .login_pw {
+    position: relative;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
     width: 100%;
+    padding-left: 15%;
 }
 
 .login_pw input {
-    width: 100%;
+    width: 80%;
     height: 50px;
     border-radius: 30px;
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 0px 20px;
     border: 1px solid lightgray;
     outline: none;
+    font-size: 1rem;
 }
 
 .submit {
+    position: relative;
+    justify-content: center;
+    align-items: center;
     margin-top: 30px;
-    width: 100%;
+    width: 80%;
+    height: 50px;
+    padding-left: 15%;
 }
 
 .submit input {

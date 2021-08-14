@@ -140,12 +140,14 @@ section{
 .paging{
     display: flex;
     justify-content: center;
-    letter-spacing: 30px;
+    padding-top: 10px;
+    font-size: 1.5rem;
+    gap: 30px;
 }
 .selected{
+    font-size: 2rem;
     font-weight : bold;
     color: #e74c3c;
-    gap: 10px;
 }
 
 
