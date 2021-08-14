@@ -73,9 +73,9 @@
 .nav>li:nth-child(2):hover .submenu{
     height:320px;
 }
-.nav>li:last-child:hover .submenu{
-    height:100px;
-}
+/*.nav>li:last-child:hover .submenu{*/
+/*    height:100px;*/
+/*}*/
 
 #dropbox_menu div {
     box-shadow: inherit;
@@ -95,10 +95,8 @@ section{
     align-items: center;
 }
 .content{
-    display: grid;
-    /*grid-template-columns: 1fr 1fr;*/
-    /*grid-template-rows: 0.5fr 0.5fr;*/
-    width: 100%;
+    display: inline-block;
+    width: 300px;
     height: 50px;
     background-color: #f9eca0;
     border: 0.5px #f9eca0 solid;
@@ -108,8 +106,12 @@ section{
 .list{
     display: grid;
     grid-template-columns: 1.1fr 0.1fr;
+    padding-left: 10px;
 }
 .title{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     padding-top: 5px;
     font-family: 'twayair';
     text-align: center;
