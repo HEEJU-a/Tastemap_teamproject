@@ -45,16 +45,17 @@ section{
 
 #line{
     padding-top: 10px;
-    padding-bottom: 5px;
     height: 5%;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 0.8fr 1.2fr;
 }
 .fav{
+    align-items: center;
     font-family: 'twayair';
     flaot:left;
 }
 #rsv{
+    padding-left: 15%;
     font-family: 'twayair';
     font-weight: inherit;
     float:right;
@@ -132,5 +133,22 @@ input::placeholder { font-family: 'twayair'; }
 .tdimg{
     width: 50px;
     height: 50px;
+    margin-right: 10px;
     border-radius: 30%;
+}
+
+.writer{
+    display: flex;
+    padding-left: 10px;
+}
+.writer > text{
+    padding-top: 5px;
+    justify-content: center;
+    text-align: center;
+}
+
+.table td {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
 }

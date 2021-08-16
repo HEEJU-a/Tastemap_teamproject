@@ -198,6 +198,7 @@ function makeCmtElemList(data){
             tdElemImg.setAttribute('src', `/img/noprofile.jpg`);
         }
         tdElemImg.className = 'tdimg';
+        tdElem1.className = 'writer';
         tdElem1.append(tdElemImg);
         tdElem1.append(item.writer);
         tdElem2.append(item.cmt);

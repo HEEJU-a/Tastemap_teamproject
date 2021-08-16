@@ -233,11 +233,11 @@ button{border:0;margin:0;padding:0;}
     position: absolute;
     border-radius: 0.5rem;
     width: 25%;
-    height: 43%;
-    top: 45%;
+    height: 49%;
+    top: 41%;
     right: 3%;
     background-color: #F2c057;
-    border: 1px solid #F2c057;
+    border: 1px solid black;
 }
 
 /*칸칸이*/
@@ -339,6 +339,7 @@ section{margin: 40px; height: auto;}
 
 /*footer*/
 footer{
+    font-family: 'twayair';
     height: 220px;
     display: flex;
     align-items: center;

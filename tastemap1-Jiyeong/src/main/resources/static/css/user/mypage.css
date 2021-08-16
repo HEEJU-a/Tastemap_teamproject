@@ -13,6 +13,7 @@
 }
 
 section{
+    font-family: 'twayair';
     padding: 130px 70px 100px 130px;
     overflow: hidden;
     display: grid;
@@ -84,15 +85,14 @@ img{
 }
 
 .upload{
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding: 10px 0 20px 0;
     margin: 0 auto;
     text-align: center;
 }
 
 #table{
     background-color: #fffbce;;
-    width: 65%;
+    width: 350px;
     height: 100%;
     margin: 0 auto;
     text-align: left;
@@ -100,6 +100,7 @@ img{
 th{
     color: #ff9856;
     border-right: 1px solid #f5f2ed;
+    line-height: 20px;
 }
 td{
     padding-left: 5px;
@@ -107,18 +108,18 @@ td{
     color: #643520;
 }
 #btm{
-    padding-top: 80px;
+    padding-top: 100px;
     display: grid;
     width: 100%;
-    height: 50%;
+    height: 60%;
+    justify-content: center;
 }
 #favWrap{
     border: 1px solid #f5f2ed;
     font-family: 'twayair';
-    width: 54%;
-    height: 70%;
+    width: 350px;
+    height: 100%;
     -ms-overflow-style: none;
-    margin-left: 140px;
 }
 #favWrap::-webkit-scrollbar{ display:none;}
 .favItem{
