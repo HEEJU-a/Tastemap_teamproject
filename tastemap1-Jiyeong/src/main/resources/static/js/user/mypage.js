@@ -46,29 +46,6 @@ function apiInfo() {
             eventList.push(obj);
         }
 
-        // var obj = {
-        //     title: nm, ct,
-        //     start: dt,
-        //     allDay: true
-        // }
-        //
-        // for(var i=0; i<obj.length; i++){
-        //     console.log(obj[i]);
-        // }
-        //
-        // var obj2 = {
-        //     title: nm,
-        //     start: dt,
-        //     allDay: true
-        // }
-
-        // eventList.push(obj)
-        // eventList.push(obj2)
-
-        // eventList.forEach((obj, i, origin) => {
-        //     console.log(obj, i , origin);
-        // });
-
 
 // calendar element 취득
         var calendarEl = $('#calendar')[0];

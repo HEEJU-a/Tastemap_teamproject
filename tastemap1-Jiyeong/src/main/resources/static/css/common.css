@@ -190,7 +190,7 @@ text:nth-child(7) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'twayair';
+    /*font-family: 'twayair';*/
 }
 
 a {
@@ -408,16 +408,4 @@ h1 {
     padding-bottom: 10px;
     cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 

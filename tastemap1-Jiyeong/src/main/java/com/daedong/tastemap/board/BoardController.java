@@ -124,14 +124,6 @@ public class BoardController {
         return data;
     }
 
-//    @GetMapping("/rsv")
-//    public String rsvList(@RequestParam(value = "iuser") int iuser, Model model){
-//        UserEntity param = new UserEntity();
-//        param.setIuser(iuser);
-//        model.addAttribute("rsvDTO", service.selRsvList(param));
-//        return "user/mypage";
-//    }
-
     @PostMapping("/rsv")
     public String rsv(RsvEntity rsvEntity, Model model){
         model.addAttribute("rsvEntity", service.insRsv(rsvEntity));

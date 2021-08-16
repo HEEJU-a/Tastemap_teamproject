@@ -18,14 +18,18 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException{
-        return new CustomUserPrincipal(loadUserByUsernameAndProvider(email, "local"));
+        UserEntity ue = loadUserByUsernameAndProvider(email, "local");
+        if(ue == null) {
+            return null;
+        }
+        return new CustomUserPrincipal(ue);
     }
 
     public UserEntity loadUserByUsernameAndProvider(String id, String provider) throws UsernameNotFoundException {
         UserEntity param = new UserEntity();
         param.setProvider(provider);
         param.setEmail(id);
-        return  mapper.selUser(param);
+        return mapper.selUser(param);
     }
 
     public int join(UserEntity param) {
@@ -35,15 +39,4 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return mapper.join(param);
     }
 
-
-//    @Override
-//    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-//        UserEntity param = new UserEntity();
-//        param.setEmail(email);
-//        UserEntity loginUser = mapper.selUser(param);
-//        if(loginUser == null){
-//            return null; //아이디가 없는 상태
-//        }
-//        return new CustomUserPrincipal(loginUser);//로그인 성공상태는 아닌데 아이디는 있는상태
-//    }
 }

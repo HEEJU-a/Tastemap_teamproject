@@ -60,22 +60,6 @@ public class UserController {
         return "user/mypage";
     }
 
-//    @RequestMapping("/mypage/{iuser}/rsv")
-//    public String rsvList(RsvDTO rsvDTO, @PathVariable int iuser, Model model){
-//        UserEntity param = new UserEntity();
-//        param.setIuser(iuser);
-//        model.addAttribute("rsvDTO", service.selRsvList(param));
-//        return "redirect:/user/mypage?iuser=" + rsvDTO.getIuser();
-//    }
-//
-//    @RequestMapping("/mypage/{iuser}/fav")
-//    public String favList(BoardDomain boardDomain, @PathVariable int iuser, Model model){
-//        UserEntity param = new UserEntity();
-//        param.setIuser(iuser);
-//        model.addAttribute("boardDomain", service.selFavList(param));
-//        return "redirect:/user/mypage?iuser=" + boardDomain.getIuser();
-//    }
-
     @PostMapping("/mypage")
     public String profile(MultipartFile img){
         int iuser = auth.getLoginUserPk();

@@ -64,15 +64,7 @@ public class BoardService {
     public int delRsv(RsvEntity param) {
         return mapper.delRsv(param);
     }
-    //    public List<RsvDTO> selRsvList(UserEntity param) {return mapper.selRsvList(param);}
-//    public BoardDomain selFav(int iboard) {
-//        return mapper.selFav(iboard);
-//    }
-//
-//    public List<BoardDomain> selFavList(BoardDomain param) {
-//        return mapper.selFavList(param);
-//    }
-//
+
 
     public int insFav(FavEntity param) {
         param.setIuser(auth.getLoginUserPk());

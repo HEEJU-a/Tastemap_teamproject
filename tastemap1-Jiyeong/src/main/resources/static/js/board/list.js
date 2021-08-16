@@ -58,18 +58,6 @@ function event1(iboard, index) {
             })
     }
 
-//좋아요 여부 값 가져오기
-//     function getFavAjax(index) {
-//         var iboard=document.querySelector('#iconIboard').dataset.iboard
-//         console.log(iboard)
-//         fetch(`/board/fav?iboard=${iboard}`)
-//             .then(res => res.json())
-//             .then(function (myJson) {
-//                 console.log("myJson:"+myJson);
-//                 toggleFav(myJson, index);
-//             });
-//     }
-
     function toggleFav(toggle, index) {
         console.log(favIconElem[index]);
         console.log(toggle);
@@ -86,4 +74,3 @@ function event1(iboard, index) {
         }
     }
 
-// getFavAjax();

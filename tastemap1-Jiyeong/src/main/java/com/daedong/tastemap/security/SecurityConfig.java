@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
@@ -36,18 +37,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
 
         http.authorizeRequests()
-                .antMatchers("/user/login", "/user/join", "/user/auth", "/home", "/user/idChk","/board/list","/board/detail").permitAll()
+                .antMatchers("/user/login", "/user/join", "/user/auth", "/home", "/user/idChk","/board/list","/board/detail")
+                .permitAll()
                 .anyRequest().authenticated();
 
         http.formLogin()
-                .loginPage("/home")
+                .loginPage("/login")
                 .usernameParameter("email")
                 .passwordParameter("pw")
-                .failureUrl("/home") // 로그인 실패시 redirect
-                .defaultSuccessUrl("/home", true);//로그인 성공하면 여기로감
+                .failureUrl("/home?error=1") // 로그인 실패시 redirect
+               // .failureHandler(failureHandler())
+                .defaultSuccessUrl("/home", true)//로그인 성공하면 여기로감
+                ;
 
         http.oauth2Login()
-                .loginPage("/home")
+                .loginPage("/login")
                 .defaultSuccessUrl("/home", true)
                 .userInfoEndpoint() //OAuth 2 로그인 성공 이후 사용자 정보를 가져올 때의 설정들을 담당합니다.
                 .userService(customOauth2UserService);
@@ -62,5 +66,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(AuthenticationManagerBuilder auth) throws Exception{
         auth.userDetailsService(userDetails).passwordEncoder(passwordEncoder());
     }
+
 }
 
