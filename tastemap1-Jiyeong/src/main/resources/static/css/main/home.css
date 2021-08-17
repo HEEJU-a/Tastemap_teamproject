@@ -78,6 +78,7 @@
 }
 
 .box-roulette {
+    font-family: twayair;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -86,12 +87,12 @@
 }
 
 .roulette{
-    font-family: 'Jua', sans-serif;
+    font-family: 'twayair';
 }
 
 #btn-start {
-    font-family: 'Pattaya', sans-serif;
-    font-size: 20px;
+    font-family: 'twaysky';
+    font-size: 1rem;
     color: tomato;
 }
 
@@ -192,7 +193,6 @@ button{border:0;margin:0;padding:0;}
     background-color:#F9ba3e;
     border-radius:6px;
     /* box-shadow: inset 5em 1em #F8A055; */
-    display:inline-block;
     cursor:pointer;
     color: #426e86;
     font-family:'twayair';
@@ -208,6 +208,7 @@ button{border:0;margin:0;padding:0;}
     background:linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
     background-color:#f2ab1e;
 }
+
 #fadeToggleBtn:active {
     position:relative;
     top:1px;

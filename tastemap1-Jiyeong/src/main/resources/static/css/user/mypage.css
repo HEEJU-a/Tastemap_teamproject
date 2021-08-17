@@ -59,7 +59,7 @@ section{
 }
 
 #up{
-    padding: 40px;
+    padding: 10px;
     position: relative;
     width: 100%;
     height: 50%;
@@ -108,7 +108,7 @@ td{
     color: #643520;
 }
 #btm{
-    padding-top: 100px;
+    padding-top: 70px;
     display: grid;
     width: 100%;
     height: 60%;
@@ -118,7 +118,7 @@ td{
     border: 1px solid #f5f2ed;
     font-family: 'twayair';
     width: 350px;
-    height: 100%;
+    height: 70%;
     -ms-overflow-style: none;
 }
 #favWrap::-webkit-scrollbar{ display:none;}
@@ -178,7 +178,4 @@ h3{
     position: sticky;
     top: 0;
     background-color: #fffbce;
-}
-
-.fc-event-title:hover {
 }
