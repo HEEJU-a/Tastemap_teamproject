@@ -33,7 +33,7 @@
                         <input type="hidden" name="iboard" th:value="${boardEntity.iboard}">
                         <th:block sec:authorize="isAuthenticated()" th:with="auth=${#authentication.getPrincipal().getUser()}">
                             <input type="hidden" name="iuser" th:value="${auth.iuser}">
-                            <input type="submit" id="rsvbtn" value="예약하기">
+                            <input type="submit" id="rsvbtn" value="예약하기" onclick="alert('예약되셨습니다.');">
                         </th:block>
                         <th:block th:if="${#authorization.expression('isAnonymous()')}">
                             <input type="submit" value="예약하기" onclick="alert('로그인이 필요합니다.');">
