@@ -1,2 +1,5 @@
-[![대동맛지도](http://img.youtube.com/vi/ikpSPWVDaFE/0.jpg)](https://youtu.be/ikpSPWVDaFE&t=3s) 
-[![대동맛지도](http://img.youtube.com/vi/8QwYkgwhgJI/0.jpg)](https://youtu.be/8QwYkgwhgJI&t=3s)
+[![대동맛지도_프리뷰](http://img.youtube.com/vi/ikpSPWVDaFE/0.jpg)](https://youtu.be/ikpSPWVDaFE&t=3s) 
+[![대동맛지도_희주](http://img.youtube.com/vi/8QwYkgwhgJI/0.jpg)](https://youtu.be/8QwYkgwhgJI&t=3s)
+ [![대동맛지도_원영](http://img.youtube.com/vi/O_1mAbmjWPQ/0.jpg)](https://youtu.be/O_1mAbmjWPQ&t=14s)
+  [![대동맛지도_지영](http://img.youtube.com/vi/BiRncrvYHsw/0.jpg)](https://youtu.be/BiRncrvYHsw&t=1s)
+  [![대동맛지도_](http://img.youtube.com/vi/lDCScEG4CmI/0.jpg)](https://youtu.be/lDCScEG4CmI&t=450s) 
