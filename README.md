@@ -21,10 +21,12 @@
   <p>📍 좋아요</p>
   <p>📍 스크랩</p>
   
+  
   ⭐️⭐️ 대동맛지도 전체보기 ⭐️⭐️
   <br/>
 [![대동맛지도](http://img.youtube.com/vi/lDCScEG4CmI/0.jpg)](https://youtu.be/lDCScEG4CmI&t=450s) 
   <br/>
+  
   
   
   ✨ 희주
@@ -33,16 +35,22 @@
   <br/>
   
   
+
+  
+  
   ✨ 원영
   <br/>
    [![대동맛지도](http://img.youtube.com/vi/O_1mAbmjWPQ/0.jpg)](https://youtu.be/O_1mAbmjWPQ&t=14s)
   <br/>
   
   
+  
+  
   ✨ 지영
   <br/>
    [![대동맛지도](http://img.youtube.com/vi/BiRncrvYHsw/0.jpg)](https://youtu.be/BiRncrvYHsw&t=1s)
   <br/>
+  
   
   
 ✨ 스택:
