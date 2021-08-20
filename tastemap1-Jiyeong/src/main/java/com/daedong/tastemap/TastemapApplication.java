@@ -9,5 +9,6 @@ public class TastemapApplication {
     public static void main(String[] args) {
         SpringApplication.run(TastemapApplication.class, args);
     }
+    
 
 }
